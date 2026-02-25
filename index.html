@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Felicia Iordachi</title>
+  <meta name="description" content="YOUR NAME — Personal academic website" />
+
+  <style>
+    :root{
+      --bg: #2e9fc7;            /* page outer background (blue like screenshot) */
+      --panel: #eaf6ff;         /* top header panel background */
+      --card: #fff7c9;          /* yellow cards */
+      --text: #111;
+      --muted: #444;
+      --link: #1a5fb4;
+      --shadow: 0 10px 30px rgba(0,0,0,.12);
+      --radius: 18px;
+      --maxw: 1020px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.35;
+    }
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 38px auto 60px;
+      padding: 0 18px;
+    }
+
+    /* Top hero panel */
+    .hero{
+      background: var(--panel);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 42px 44px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    h1{
+      margin: 0 0 12px 0;
+      font-size: 44px;
+      letter-spacing: -0.5px;
+      font-weight: 750;
+    }
+
+    .bio{
+      font-size: 15.5px;
+      color: var(--muted);
+      margin: 0 0 16px 0;
+    }
+
+    .links{
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .links a{
+      color: var(--link);
+      text-decoration: none;
+    }
+    .links a:hover{ text-decoration: underline; }
+
+    .avatar{
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-left: auto;
+      box-shadow: 0 14px 40px rgba(0,0,0,.18);
+      background: #ddd;
+    }
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Section headings */
+    section{
+      margin-top: 34px;
+    }
+    .section-title{
+      font-size: 28px;
+      font-weight: 750;
+      margin: 0 0 8px 0;
+      color: #111;
+    }
+    .section-subtitle{
+      margin: 0 0 16px 0;
+      color: #1f1f1f;
+      opacity: .9;
+      font-size: 15px;
+    }
+
+    /* Cards */
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 24px rgba(0,0,0,.10);
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin: 16px 0;
+    }
+
+    .thumb{
+      width: 100%;
+      height: 170px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(0,0,0,.06);
+      position: relative;
+    }
+    .thumb img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card h3{
+      margin: 0 0 6px 0;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .meta{
+      font-size: 13.5px;
+      color: #333;
+      margin: 0 0 8px 0;
+    }
+    .meta em{
+      font-style: italic;
+      color: #2b2b2b;
+    }
+    .desc{
+      margin: 0 0 10px 0;
+      font-size: 14.5px;
+      color: #222;
+    }
+    .pill-links{
+      font-size: 13.5px;
+      color: #333;
+    }
+    .pill-links a{
+      color: var(--link);
+      text-decoration: none;
+    }
+    .pill-links a:hover{ text-decoration: underline; }
+
+    /* Small screens */
+    @media (max-width: 860px){
+      .hero{
+        grid-template-columns: 1fr;
+        padding: 28px 22px;
+      }
+      .avatar{
+        width: 210px; height: 210px;
+        margin: 8px 0 0 0;
+      }
+      h1{ font-size: 36px; }
+      .card{
+        grid-template-columns: 1fr;
+      }
+      .thumb{ height: 200px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- HERO -->
+    <header class="hero">
+      <div>
+        <h1>YOUR NAME</h1>
+        <p class="bio">
+          I’m a <b>YOUR ROLE</b> at <a href="https://www.upenn.edu/" target="_blank" rel="noreferrer">YOUR INSTITUTION</a>,
+          working on <b>robot learning</b>, <b>control</b>, and <b>computer vision</b>.
+          I’m especially interested in <b>ONE-LINE FOCUS</b>.
+        </p>
+
+        <p class="bio">
+          Previously: <b>PAST ROLE / DEGREE</b> at <a href="#" target="_blank" rel="noreferrer">PLACE</a>.
+          (Optional) I also work on <b>bioinformatics / comp bio</b>, especially <b>TOPIC</b>.
+        </p>
+
+        <div class="links">
+          <a href="mailto:you@email.com">Email</a> /
+          <a href="#" target="_blank" rel="noreferrer">CV</a> /
+          <a href="#" target="_blank" rel="noreferrer">Scholar</a> /
+          <a href="#" target="_blank" rel="noreferrer">Twitter</a> /
+          <a href="#" target="_blank" rel="noreferrer">GitHub</a> /
+          <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <span> / Location: City, State</span>
+        </div>
+      </div>
+
+      <div class="avatar">
+        <img src="assets/profile.jpg" alt="Profile photo" />
+      </div>
+    </header>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2 class="section-title">Research</h2>
+      <p class="section-subtitle">
+        I’m interested in robot learning, control, and 3D computer vision. Selected papers are highlighted.
+      </p>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/research_maestro.jpg" alt="Research thumbnail" />
+        </div>
+        <div>
+          <h3>Paper Title: Orchestrating Robotics Modules with Vision-Language Models</h3>
+          <p class="meta">
+            <b>Your Name</b>, Coauthor A, Coauthor B, … <br/>
+            <em>Conference/Workshop</em>, Year (status)
+          </p>
+          <p class="desc">
+            2–4 sentences: what you built, why it matters, and one concrete result or capability.
+            Keep this technical and specific (like the screenshot style).
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">project page</a> /
+            <a href="#" target="_blank" rel="noreferrer">arXiv</a> /
+            <a href="#" target="_blank" rel="noreferrer">code</a> /
+            <a href="#" target="_blank" rel="noreferrer">video</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/research_maestro.jpg" alt="Research thumbnail" />
+        </div>
+        <div>
+          <h3>Paper Title: Another Research Project</h3>
+          <p class="meta">
+            Your Name, Coauthor … <br/>
+            <em>Venue</em>, Year
+          </p>
+          <p class="desc">
+            Short description. Add one method keyword (e.g., diffusion, MPC, SLAM, imitation learning) and one measurable outcome.
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">project page</a> /
+            <a href="#" target="_blank" rel="noreferrer">pdf</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">
+        Personal and course projects showcasing robotics, ML, and software engineering work.
+      </p>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/project_drone.jpg" alt="Project thumbnail" />
+        </div>
+        <div>
+          <h3>Autonomous Drone Racing with Reinforcement Learning</h3>
+          <p class="meta">
+            Course Project | <em>Course Name</em> | 2025
+          </p>
+          <p class="desc">
+            Explain what you implemented (stack + key components). Example: PPO policy + reward shaping + sim environment + eval metric.
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">GitHub</a> /
+            <a href="#" target="_blank" rel="noreferrer">demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/project_drone.jpg" alt="Project thumbnail" />
+        </div>
+        <div>
+          <h3>Vision-Based Motion Planning in Cluttered Environments</h3>
+          <p class="meta">
+            Personal Project | 2026
+          </p>
+          <p class="desc">
+            Keep it concrete: sensors/input → mapping → planning → control. Mention one algorithm (A*, MPC, iLQR, EKF, etc.).
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">writeup</a> /
+            <a href="#" target="_blank" rel="noreferrer">code</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- BIOINFORMATICS / COMP BIO CAMPS -->
+    <section id="camps">
+      <h2 class="section-title">Bioinformatics / Comp Bio Camps</h2>
+      <p class="section-subtitle">
+        Workshops, camps, and curriculum I’ve built or taught (or attended) focused on computational biology and data science.
+      </p>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/camp1.jpg" alt="Camp thumbnail" />
+        </div>
+        <div>
+          <h3>Camp Name: Computational Biology Bootcamp</h3>
+          <p class="meta">
+            Role (Instructor/Organizer) | Year | Audience (e.g., HS students, undergrads)
+          </p>
+          <p class="desc">
+            2–3 sentences: what students built/learned (e.g., RNA-seq pipeline, GWAS intro, single-cell basics), and any outcomes.
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">syllabus</a> /
+            <a href="#" target="_blank" rel="noreferrer">materials</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/camp1.jpg" alt="Camp thumbnail" />
+        </div>
+        <div>
+          <h3>Another Camp / Workshop</h3>
+          <p class="meta">
+            Role | Year
+          </p>
+          <p class="desc">
+            Add a crisp, technical description of content + format (lectures, labs, mini-projects) and a link to materials.
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">materials</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer style="margin-top:34px; color: rgba(255,255,255,.9); font-size: 13px;">
+      © <span id="y"></span> YOUR NAME · Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
