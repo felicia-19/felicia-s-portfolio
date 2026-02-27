@@ -4,80 +4,96 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Felicia Iordachi</title>
-  <meta name="description" content="YOUR NAME — Personal academic website" />
+  <meta name="description" content="Felicia Iordachi — AI x Biology | Bioinformatics | Computational Biology" />
 
   <style>
     :root{
-      --bg: #2e9fc7;            /* page outer background (blue like screenshot) */
-      --panel: #eaf6ff;         /* top header panel background */
-      --card: #fff7c9;          /* yellow cards */
+      --bg: #f6f8fb;          /* very light gray background */
+      --panel: #ffffff;       /* hero white */
+      --card: #ffffff;        /* white cards */
       --text: #111;
-      --muted: #444;
-      --link: #1a5fb4;
-      --shadow: 0 10px 30px rgba(0,0,0,.12);
-      --radius: 18px;
+      --muted: #555;
+      --link: #1f4ed8;        /* subtle academic blue */
+      --border: #e5e7eb;      /* soft gray border */
+      --shadow: 0 8px 24px rgba(0,0,0,.06);
+      --radius: 16px;
       --maxw: 1020px;
     }
 
     *{ box-sizing: border-box; }
+
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
-      line-height: 1.35;
+      line-height: 1.5;
     }
 
     .wrap{
       max-width: var(--maxw);
-      margin: 38px auto 60px;
-      padding: 0 18px;
+      margin: 48px auto 80px;
+      padding: 0 20px;
     }
 
-    /* Top hero panel */
+    /* HERO */
     .hero{
       background: var(--panel);
-      border-radius: 28px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
       box-shadow: var(--shadow);
-      padding: 42px 44px;
+      padding: 40px;
       display: grid;
       grid-template-columns: 1.2fr .8fr;
-      gap: 34px;
+      gap: 40px;
       align-items: center;
     }
 
     h1{
-      margin: 0 0 12px 0;
-      font-size: 44px;
-      letter-spacing: -0.5px;
-      font-weight: 750;
+      margin: 0 0 14px 0;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
     }
 
     .bio{
       font-size: 15.5px;
       color: var(--muted);
-      margin: 0 0 16px 0;
+      margin: 0 0 14px 0;
     }
 
-    .links{
+    .highlights{
       font-size: 14.5px;
+      color: #3b3b3b;
+      margin: 0 0 14px 0;
+      padding-left: 18px;
+    }
+    .highlights li{ margin: 4px 0; }
+
+    .links{
+      font-size: 14px;
+      margin-top: 10px;
       color: var(--muted);
     }
+
     .links a{
       color: var(--link);
       text-decoration: none;
     }
+
     .links a:hover{ text-decoration: underline; }
 
     .avatar{
-      width: 260px;
-      height: 260px;
+      width: 240px;
+      height: 240px;
       border-radius: 999px;
       overflow: hidden;
       margin-left: auto;
-      box-shadow: 0 14px 40px rgba(0,0,0,.18);
-      background: #ddd;
+      border: 1px solid var(--border);
+      background: #f1f5f9;
     }
+
     .avatar img{
       width: 100%;
       height: 100%;
@@ -85,44 +101,42 @@
       display: block;
     }
 
-    /* Section headings */
-    section{
-      margin-top: 34px;
-    }
+    section{ margin-top: 44px; }
+
     .section-title{
-      font-size: 28px;
-      font-weight: 750;
-      margin: 0 0 8px 0;
-      color: #111;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 6px 0;
     }
+
     .section-subtitle{
-      margin: 0 0 16px 0;
-      color: #1f1f1f;
-      opacity: .9;
+      margin: 0 0 20px 0;
+      color: var(--muted);
       font-size: 15px;
     }
 
-    /* Cards */
+    /* CARDS */
     .card{
       background: var(--card);
       border-radius: var(--radius);
-      box-shadow: 0 10px 24px rgba(0,0,0,.10);
-      padding: 18px;
+      border: 1px solid var(--border);
+      padding: 20px;
       display: grid;
       grid-template-columns: 280px 1fr;
-      gap: 18px;
+      gap: 22px;
       align-items: start;
-      margin: 16px 0;
+      margin: 20px 0;
     }
 
     .thumb{
       width: 100%;
       height: 170px;
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
-      background: rgba(0,0,0,.06);
-      position: relative;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
     }
+
     .thumb img{
       width: 100%;
       height: 100%;
@@ -133,47 +147,55 @@
     .card h3{
       margin: 0 0 6px 0;
       font-size: 18px;
-      font-weight: 800;
+      font-weight: 700;
     }
+
     .meta{
       font-size: 13.5px;
-      color: #333;
+      color: #444;
       margin: 0 0 8px 0;
     }
-    .meta em{
-      font-style: italic;
-      color: #2b2b2b;
-    }
+
     .desc{
-      margin: 0 0 10px 0;
       font-size: 14.5px;
       color: #222;
+      margin: 0 0 10px 0;
     }
+
     .pill-links{
       font-size: 13.5px;
-      color: #333;
+      color: #444;
     }
+
     .pill-links a{
       color: var(--link);
       text-decoration: none;
     }
+
     .pill-links a:hover{ text-decoration: underline; }
 
-    /* Small screens */
+    footer{
+      margin-top: 50px;
+      font-size: 13px;
+      color: #666;
+    }
+
     @media (max-width: 860px){
       .hero{
         grid-template-columns: 1fr;
-        padding: 28px 22px;
+        padding: 28px;
       }
       .avatar{
-        width: 210px; height: 210px;
-        margin: 8px 0 0 0;
+        margin: 0;
+        width: 200px;
+        height: 200px;
       }
-      h1{ font-size: 36px; }
       .card{
         grid-template-columns: 1fr;
       }
-      .thumb{ height: 200px; }
+      .thumb{
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -183,26 +205,28 @@
     <!-- HERO -->
     <header class="hero">
       <div>
-        <h1>YOUR NAME</h1>
-        <p class="bio">
-          I’m a <b>YOUR ROLE</b> at <a href="https://www.upenn.edu/" target="_blank" rel="noreferrer">YOUR INSTITUTION</a>,
-          working on <b>robot learning</b>, <b>control</b>, and <b>computer vision</b>.
-          I’m especially interested in <b>ONE-LINE FOCUS</b>.
-        </p>
+        <h1>Felicia Iordachi</h1>
 
         <p class="bio">
-          Previously: <b>PAST ROLE / DEGREE</b> at <a href="#" target="_blank" rel="noreferrer">PLACE</a>.
-          (Optional) I also work on <b>bioinformatics / comp bio</b>, especially <b>TOPIC</b>.
+          I’m a <b>first-year</b> at the <a href="https://www.upenn.edu/" target="_blank" rel="noreferrer">University of Pennsylvania</a>
+          studying <b>Mathematics</b> and <b>Computer Science</b>, focused on <b>AI x Biology</b>—especially computational methods for
+          biomarker discovery, immune/cancer biology, and robust ML systems for biomedical data.
         </p>
+
+        <ul class="highlights">
+          <li><b>ISEF 2024 Grand Award</b> (Biomedical &amp; Health Sciences): TES hypomethylation as a breast cancer biomarker</li>
+          <li><b>USC Mangul Lab (3 years)</b>: 2 papers + 1 arXiv; <b>first author</b> on AIRR-Seq aligner benchmarking</li>
+          <li><b>Digi.Bio (Netherlands)</b>: single-cell time-lapse tracking &amp; ML pipelines for immunotherapy evaluation</li>
+          <li><b>Neonatal DBS QC</b>: computer vision + CNN/RF pipeline; pilot deployment in Moldova’s Neonatal Screening Lab</li>
+        </ul>
 
         <div class="links">
-          <a href="mailto:you@email.com">Email</a> /
+          <a href="mailto:your.email@seas.upenn.edu">Email</a> /
           <a href="#" target="_blank" rel="noreferrer">CV</a> /
-          <a href="#" target="_blank" rel="noreferrer">Scholar</a> /
-          <a href="#" target="_blank" rel="noreferrer">Twitter</a> /
+          <a href="#" target="_blank" rel="noreferrer">Google Scholar</a> /
           <a href="#" target="_blank" rel="noreferrer">GitHub</a> /
           <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <span> / Location: City, State</span>
+          <span> · Philadelphia, PA</span>
         </div>
       </div>
 
@@ -215,48 +239,67 @@
     <section id="research">
       <h2 class="section-title">Research</h2>
       <p class="section-subtitle">
-        I’m interested in robot learning, control, and 3D computer vision. Selected papers are highlighted.
+        Research across genomics, immune repertoire analysis, and computational methods benchmarking. (Images and links will be added.)
       </p>
 
       <article class="card">
         <div class="thumb">
-          <img src="assets/research_maestro.jpg" alt="Research thumbnail" />
+          <img src="assets/airr_benchmark.jpg" alt="AIRR-Seq benchmarking thumbnail" />
         </div>
         <div>
-          <h3>Paper Title: Orchestrating Robotics Modules with Vision-Language Models</h3>
+          <h3>AIRR-Seq Aligner Benchmarking (First Author)</h3>
           <p class="meta">
-            <b>Your Name</b>, Coauthor A, Coauthor B, … <br/>
-            <em>Conference/Workshop</em>, Year (status)
+            <b>Felicia Iordachi</b>, collaborators… <br/>
+            <em>arXiv / manuscript</em> · Year
           </p>
           <p class="desc">
-            2–4 sentences: what you built, why it matters, and one concrete result or capability.
-            Keep this technical and specific (like the screenshot style).
+            Benchmarked widely used AIRR-Seq alignment tools (e.g., IgBlast, HighV-Quest, MiXCR) using simulated TCRα datasets.
+            Evaluated alignment accuracy, tool failures, and performance trends across read lengths.
           </p>
           <div class="pill-links">
-            <a href="#" target="_blank" rel="noreferrer">project page</a> /
             <a href="#" target="_blank" rel="noreferrer">arXiv</a> /
             <a href="#" target="_blank" rel="noreferrer">code</a> /
-            <a href="#" target="_blank" rel="noreferrer">video</a>
+            <a href="#" target="_blank" rel="noreferrer">slides</a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="thumb">
-          <img src="assets/research_maestro.jpg" alt="Research thumbnail" />
+          <img src="assets/wastewater_sarscov2.jpg" alt="Wastewater surveillance thumbnail" />
         </div>
         <div>
-          <h3>Paper Title: Another Research Project</h3>
+          <h3>Wastewater Genomic Surveillance for SARS-CoV-2 Lineages</h3>
           <p class="meta">
-            Your Name, Coauthor … <br/>
-            <em>Venue</em>, Year
+            USC Mangul Lab · <em>publication</em> · Year
           </p>
           <p class="desc">
-            Short description. Add one method keyword (e.g., diffusion, MPC, SLAM, imitation learning) and one measurable outcome.
+            Comprehensive benchmarking of methods for estimating relative SARS-CoV-2 lineage abundance from wastewater sequencing,
+            including impacts of sequencing technology, read length/depth, and RNA degradation in wastewater matrices.
           </p>
           <div class="pill-links">
-            <a href="#" target="_blank" rel="noreferrer">project page</a> /
-            <a href="#" target="_blank" rel="noreferrer">pdf</a>
+            <a href="#" target="_blank" rel="noreferrer">paper</a> /
+            <a href="#" target="_blank" rel="noreferrer">code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/ra_networks.jpg" alt="Rheumatoid arthritis networks thumbnail" />
+        </div>
+        <div>
+          <h3>Multi-Omics Network Modeling in Rheumatoid Arthritis</h3>
+          <p class="meta">
+            USC Mangul Lab · <em>publication</em> · Year
+          </p>
+          <p class="desc">
+            Built multi-layer networks combining RNA-seq (DESeq2), co-expression, regulatory inference (GENIE3),
+            protein interactions (STRING), GWAS/DisGeNET links, and drug-target associations to identify candidate RA modules.
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">paper</a> /
+            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
       </article>
@@ -266,43 +309,70 @@
     <section id="projects">
       <h2 class="section-title">Projects</h2>
       <p class="section-subtitle">
-        Personal and course projects showcasing robotics, ML, and software engineering work.
+        Independent work spanning epigenomics, biomedical computer vision, and applied ML systems.
       </p>
 
       <article class="card">
         <div class="thumb">
-          <img src="assets/project_drone.jpg" alt="Project thumbnail" />
+          <img src="assets/isef_tes_methylation.jpg" alt="ISEF TES methylation thumbnail" />
         </div>
         <div>
-          <h3>Autonomous Drone Racing with Reinforcement Learning</h3>
+          <h3>TES Hypomethylation as a Breast Cancer Biomarker (ISEF 2024)</h3>
           <p class="meta">
-            Course Project | <em>Course Name</em> | 2025
+            Independent research · <em>ISEF Grand Award</em> · 2024
           </p>
           <p class="desc">
-            Explain what you implemented (stack + key components). Example: PPO policy + reward shaping + sim environment + eval metric.
+            Analyzed bisulfite sequencing data and extracted cytosine-level methylation metrics across gene regions.
+            Identified a statistically significant hypomethylation pattern at transcription ending sites (TES) as a candidate biomarker
+            with potential for minimally invasive detection via circulating tumor DNA.
           </p>
           <div class="pill-links">
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a> /
-            <a href="#" target="_blank" rel="noreferrer">demo</a>
+            <a href="#" target="_blank" rel="noreferrer">poster / writeup</a> /
+            <a href="#" target="_blank" rel="noreferrer">code</a> /
+            <a href="#" target="_blank" rel="noreferrer">media</a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="thumb">
-          <img src="assets/project_drone.jpg" alt="Project thumbnail" />
+          <img src="assets/single_cell_tracking.jpg" alt="Single-cell tracking thumbnail" />
         </div>
         <div>
-          <h3>Vision-Based Motion Planning in Cluttered Environments</h3>
+          <h3>Single-Cell Time-Lapse Tracking for Immunotherapy Evaluation (Digi.Bio)</h3>
           <p class="meta">
-            Personal Project | 2026
+            Data Scientist · Netherlands · <em>industry</em> · Gap year
           </p>
           <p class="desc">
-            Keep it concrete: sensors/input → mapping → planning → control. Mention one algorithm (A*, MPC, iLQR, EKF, etc.).
+            Built components for time-lapse single-cell tracking: graph-based cell ID propagation, split/merge handling during division,
+            and preprocessing for noisy microscopy (background correction, filtering, adaptive thresholding).
+            Worked with classical ML (random forests) and segmentation models (e.g., Cellpose, SAM).
           </p>
           <div class="pill-links">
-            <a href="#" target="_blank" rel="noreferrer">writeup</a> /
-            <a href="#" target="_blank" rel="noreferrer">code</a>
+            <a href="#" target="_blank" rel="noreferrer">demo</a> /
+            <a href="#" target="_blank" rel="noreferrer">technical note</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="thumb">
+          <img src="assets/neonatal_dbs_qc.jpg" alt="Neonatal DBS QC thumbnail" />
+        </div>
+        <div>
+          <h3>Automated Quality Control for Neonatal Dried Blood Spot Screening</h3>
+          <p class="meta">
+            Independent project · <em>Computer Vision + ML</em> · Ongoing
+          </p>
+          <p class="desc">
+            Developed a computer vision pipeline for DBS quality assessment as an alternative to subjective visual inspection.
+            Combines feature extraction with CNN classification and a random forest model in a continuous training loop,
+            with pilot deployment in Moldova’s Neonatal Screening Laboratory and additional trials planned.
+          </p>
+          <div class="pill-links">
+            <a href="#" target="_blank" rel="noreferrer">project page</a> /
+            <a href="#" target="_blank" rel="noreferrer">poster</a> /
+            <a href="#" target="_blank" rel="noreferrer">code (private)</a>
           </div>
         </div>
       </article>
@@ -310,51 +380,52 @@
 
     <!-- BIOINFORMATICS / COMP BIO CAMPS -->
     <section id="camps">
-      <h2 class="section-title">Bioinformatics / Comp Bio Camps</h2>
+      <h2 class="section-title">Bioinformatics / Comp Bio Training</h2>
       <p class="section-subtitle">
-        Workshops, camps, and curriculum I’ve built or taught (or attended) focused on computational biology and data science.
+        Early training that shaped my foundation in computational genomics.
       </p>
 
       <article class="card">
         <div class="thumb">
-          <img src="assets/camp1.jpg" alt="Camp thumbnail" />
+          <img src="assets/eebcg_school.jpg" alt="Eastern European Bioinformatics School thumbnail" />
         </div>
         <div>
-          <h3>Camp Name: Computational Biology Bootcamp</h3>
+          <h3>Eastern European Bioinformatics &amp; Computational Genomics Schools (2x)</h3>
           <p class="meta">
-            Role (Instructor/Organizer) | Year | Audience (e.g., HS students, undergrads)
+            Participant · <em>summer schools</em> · Years
           </p>
           <p class="desc">
-            2–3 sentences: what students built/learned (e.g., RNA-seq pipeline, GWAS intro, single-cell basics), and any outcomes.
+            Training across core bioinformatics workflows: sequence alignment, variant calling, genome assembly, RNA-seq differential expression,
+            methylation/epigenomics, phylogenetics, immune repertoire analysis, clustering, network inference, and intro ML for biomarker discovery.
           </p>
           <div class="pill-links">
-            <a href="#" target="_blank" rel="noreferrer">syllabus</a> /
-            <a href="#" target="_blank" rel="noreferrer">materials</a>
+            <a href="#" target="_blank" rel="noreferrer">certificate / notes</a> /
+            <a href="#" target="_blank" rel="noreferrer">selected work</a>
           </div>
         </div>
       </article>
 
       <article class="card">
         <div class="thumb">
-          <img src="assets/camp1.jpg" alt="Camp thumbnail" />
+          <img src="assets/ibo_bioinformatics.jpg" alt="IBO training thumbnail" />
         </div>
         <div>
-          <h3>Another Camp / Workshop</h3>
+          <h3>Biology Olympiad → IBO Training Camp</h3>
           <p class="meta">
-            Role | Year
+            National Biology Olympiad Bronze · Top-10 IBO training camp
           </p>
           <p class="desc">
-            Add a crisp, technical description of content + format (lectures, labs, mini-projects) and a link to materials.
+            Early exposure to computational approaches through olympiad-style bioinformatics tasks, which motivated my shift toward AI x Biology.
           </p>
           <div class="pill-links">
-            <a href="#" target="_blank" rel="noreferrer">materials</a>
+            <a href="#" target="_blank" rel="noreferrer">highlights</a>
           </div>
         </div>
       </article>
     </section>
 
-    <footer style="margin-top:34px; color: rgba(255,255,255,.9); font-size: 13px;">
-      © <span id="y"></span> YOUR NAME · Built with GitHub Pages
+    <footer>
+      © <span id="y"></span> Felicia Iordachi · Built with GitHub Pages
     </footer>
   </div>
 
